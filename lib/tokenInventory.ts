@@ -13,9 +13,9 @@ export type Metadata = {
 }
 
 export type Contracts = {
-  smokeBond: null | Contract
-  supportTicket: null | Contract
-  gardenTicket: null | Contract
+  smokeBond: Contract
+  supportTicket: Contract
+  gardenTicket: Contract
 }
 
 export const contractName = (contractAddr: string): string => {
