@@ -212,7 +212,7 @@ const Exchange = ({ inventory, totalSupply, address, contracts }: Props) => {
         </Box>
       </Box>
 
-      {/* {contracts.smokeBond ? (
+      {contracts.smokeBond ? (
         <>
           <Button onClick={() => signExchange(contracts.smokeBond as Contract)}>
             Sign
@@ -220,7 +220,7 @@ const Exchange = ({ inventory, totalSupply, address, contracts }: Props) => {
         </>
       ) : (
         <>:</>
-      )} */}
+      )}
     </>
   )
 }

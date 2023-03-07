@@ -13,9 +13,9 @@ const Inventory = ({ inventory }: Props) => {
       <Heading py="5" as="h2" fontFamily="monospace">
         {"User's NSTs balance"}
       </Heading>
-      {/* {!inventory.length && <Spinner />} */}
+      {!inventory.length && <Spinner />}
       <Box display="flex" gap="5">
-        {/* {inventory.map((nst: Collection) => {
+        {inventory.map((nst: Collection) => {
           return nst.tokens.map((token: EtherEvent) => {
             if (token.args) {
               return (
@@ -50,7 +50,7 @@ const Inventory = ({ inventory }: Props) => {
               )
             }
           })
-        })} */}
+        })}
       </Box>
     </>
   )
