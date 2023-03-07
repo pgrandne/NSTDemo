@@ -14,10 +14,10 @@ import {
   fetchCollections,
   fetchToken,
 } from "@/lib/tokenInventory"
-import Account from "./Account"
-import Inventory from "./Inventory"
-import Mint from "./Mint"
-import Exchange from "./Exchange"
+import Account from "../components/Account"
+import Inventory from "../components/Inventory"
+import Mint from "../components/Mint"
+import Exchange from "../components/Exchange"
 
 const Home = () => {
   const { address, isConnected } = useAccount()
@@ -97,7 +97,7 @@ const Home = () => {
           {address && <Inventory inventory={inventory} />}
 
           {/* MINT TOKEN */}
-          {address && (typeof contracts.smokeBond !== 'undefined') && <Mint address={address} contracts={contracts} />}
+          {address && <Mint address={address} contracts={contracts} />}
 
           {/* PERFORM AN EXCHANGE */}
           {address && (
