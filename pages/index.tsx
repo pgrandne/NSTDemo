@@ -30,7 +30,7 @@ const Home = () => {
 
   // FETCH CONTRACT and Tokens
   useEffect(() => {
-    ;(async () => {
+    ; (async () => {
       const signer = await fetchSigner()
       if (signer) {
         let _contracts = {} as Contracts
@@ -61,7 +61,7 @@ const Home = () => {
 
   // FETCH INVENTORY
   useEffect(() => {
-    ;(async () => {
+    ; (async () => {
       if (smokeBond && supportTicket && gardenTicket && address) {
         const inventory: Collection[] = []
         inventory.push(await fetchToken(supportTicket, address))
@@ -97,7 +97,7 @@ const Home = () => {
           {address && <Inventory inventory={inventory} />}
 
           {/* MINT TOKEN */}
-          {address && <Mint address={address} contracts={contracts} />}
+          {address && (typeof contracts.smokeBond !== 'undefined') && <Mint address={address} contracts={contracts} />}
 
           {/* PERFORM AN EXCHANGE */}
           {address && (
