@@ -18,7 +18,7 @@ type Props = {
 
 const Mint = ({ contracts, address }: Props) => {
   const [destination, setDestination] = useState(address)
-  // const { smokeBond, supportTicket, gardenTicket } = contracts
+  const { smokeBond, supportTicket, gardenTicket } = contracts
 
   return (
     <>
