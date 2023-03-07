@@ -19,9 +19,7 @@ type Props = {
 
 const Mint = ({ contracts, address }: Props) => {
   const [destination, setDestination] = useState(address)
-  const smokeBond = contracts.smokeBond
-  const supportTicket = contracts.supportTicket
-  const gardentTickret = contracts.gardenTicket
+  const { smokeBond, supportTicket, gardenTicket } = contracts
 
   return (
     <>
@@ -33,9 +31,9 @@ const Mint = ({ contracts, address }: Props) => {
         <FormLabel>Mint to:</FormLabel>
         <InputGroup>
           <Input
-            // focusBorderColor={
-            //   destination.length === 42 ? "green.500" : "red.500"
-            // }
+            focusBorderColor={
+              destination.length === 42 ? "green.500" : "red.500"
+            }
             onChange={(e) => setDestination(e.target.value)}
             value={destination}
             bg="white"
@@ -53,7 +51,7 @@ const Mint = ({ contracts, address }: Props) => {
         </InputGroup>
       </FormControl>
 
-      {/* {smokeBond && supportTicket && gardenTicket && (
+      {smokeBond && supportTicket && gardenTicket && (
         <>
           <Button
             me="4"
@@ -80,7 +78,7 @@ const Mint = ({ contracts, address }: Props) => {
             Mint a garden ticket
           </Button>
         </>
-      )} */}
+      )}
     </>
   )
 }
