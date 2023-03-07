@@ -10,6 +10,7 @@ import {
   InputRightElement,
 } from "@chakra-ui/react"
 import { useState } from "react"
+import { Contract } from "ethers"
 
 type Props = {
   contracts: Contracts
@@ -18,9 +19,9 @@ type Props = {
 
 const Mint = ({ contracts, address }: Props) => {
   const [destination, setDestination] = useState(address)
-  const smokeBond = contracts.smokeBond
-  const supportTicket = contracts.supportTicket
-  const gardentTickret = contracts.gardenTicket
+  const smokeBond: null | Contract = contracts.smokeBond
+  const supportTicket: null | Contract = contracts.supportTicket
+  const gardentTickret: null | Contract = contracts.gardenTicket
 
   return (
     <>
