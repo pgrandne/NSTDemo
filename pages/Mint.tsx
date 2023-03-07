@@ -30,9 +30,9 @@ const Mint = ({ contracts, address }: Props) => {
         <FormLabel>Mint to:</FormLabel>
         <InputGroup>
           <Input
-            focusBorderColor={
-              destination.length === 42 ? "green.500" : "red.500"
-            }
+            // focusBorderColor={
+            //   destination.length === 42 ? "green.500" : "red.500"
+            // }
             onChange={(e) => setDestination(e.target.value)}
             value={destination}
             bg="white"

@@ -133,7 +133,7 @@ const Exchange = ({ inventory, totalSupply, address, contracts }: Props) => {
             }}
             bg="white"
           >
-            {inventory.map((nst: Collection) => {
+            {/* {inventory.map((nst: Collection) => {
               return nst.tokens.map((token: EtherEvent) => {
                 if (token.args) {
                   return (
@@ -146,7 +146,7 @@ const Exchange = ({ inventory, totalSupply, address, contracts }: Props) => {
                   )
                 }
               })
-            })}
+            })} */}
           </Select>
         </Box>
         <Box maxW="20%">
